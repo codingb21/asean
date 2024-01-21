@@ -1,6 +1,12 @@
 import express from "express";
 const router = express.Router();
-
+import mysql from "mysql2";
+const db = mysql.createConnection({
+  host: "127.0.0.1",
+  user: "root",
+  password: "",
+  database: "mydb",
+});
 
 //GET ALL
 router.get("/all", (req, res) => {
