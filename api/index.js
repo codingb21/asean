@@ -6,11 +6,10 @@ import allDataRoute from "./routes/all_data.js";
 import mysql from "mysql2";
 import path from "path";
 const db = mysql.createConnection({
-  host: "172.21.1444.1",
+  host: "localhost",
   user: "root",
   password: "",
   database: "mydb",
-  port: 3306,
 });
 const __dirname = path.resolve();
 db.connect((err) => {
