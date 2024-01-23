@@ -14,7 +14,6 @@ db.connect((err) => {
     console.log("Connected to MySQL");
   }
 });
-router.use(express.json());
 //GET ALL
 router.get("/all", (req, res) => {
   const sql =

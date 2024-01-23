@@ -4,9 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import allDataRoute from "./routes/all_data.js";
 import path from "path";
-
 const __dirname = path.resolve();
-
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
