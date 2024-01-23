@@ -7,7 +7,7 @@ const db = mysql.createConnection({
   user: "root",
   password: "",
   database: "mydb",
-  socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
+
 });
 
 db.connect((err) => {
