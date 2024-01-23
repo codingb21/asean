@@ -2,7 +2,7 @@ import express from "express";
 import mysql from "mysql2";
 const router = express.Router();
 const db = mysql.createConnection({
-  host: "127.0.0.1",
+  host: "172.30.112.1",
   port: 3306,
   user: "root",
   password: "",
