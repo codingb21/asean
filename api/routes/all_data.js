@@ -7,7 +7,14 @@ const db = mysql.createConnection({
   password: "",
   database: "mydb",
 });
-
+db.connect((err) => {
+  if (err) {
+    console.error("MySQL connection error:", err);
+  } else {
+    console.log("Connected to MySQL");
+  }
+});
+router.use(express.json());
 //GET ALL
 router.get("/all", (req, res) => {
   const sql =
