@@ -6,7 +6,7 @@ import allDataRoute from "./routes/all_data.js";
 import mysql from "mysql2";
 import path from "path";
 const db = mysql.createConnection({
-  host: "127.0.0.1",
+  host: "localhost",
   user: "root",
   password: "",
   database: "mydb",
@@ -25,9 +25,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 //middleware
 app.use("/all_data", allDataRoute);
-
-app.listen(3001, () => {
-  console.log("server is running on port 3001");
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log("server is running on port " + PORT);
 });
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
