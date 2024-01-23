@@ -7,7 +7,7 @@ const db = mysql.createConnection({
   user: "root",
   password: "",
   database: "mydb",
-  connectTimeout: 30000, 
+
 });
 
 db.connect((err) => {
