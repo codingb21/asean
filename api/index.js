@@ -16,10 +16,10 @@ app.listen(PORT, () => {
   console.log("server is running on port " + PORT);
 });
 // Assuming your frontend is built in the "dist" directory
-app.use(express.static(path.join(__dirname, "/client/src")));
+app.use(express.static(path.join(__dirname, "/client/dist")));
 
 app.get("*", (req, res) => {
   // Update the path to match your built frontend
-  res.sendFile(path.join(__dirname, "client", "src", "index.html"));
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 
