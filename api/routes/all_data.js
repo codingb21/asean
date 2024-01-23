@@ -10,7 +10,7 @@ const db = mysql.createPool({
   connectionLimit: 10, // Adjust as needed
 });
 
-db.connect((err) => {
+db.createPool((err) => {
   if (err) {
     console.error("MySQL connection error:", err);
   } else {
